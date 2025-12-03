@@ -76,7 +76,7 @@ Host empty. It use nslookup, if your DNS has not the right record of the IP, you
 ___________
 MIT License
 -
-TonoTek.com - Copyright 2025
+TonoTek - Copyright 2025
 Developed for network testing and device discovery in embedded/IoT environments.
 
 Note: Use responsibly. Make sure you have permissions to scan the target network.
