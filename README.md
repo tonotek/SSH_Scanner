@@ -102,7 +102,7 @@ Host empty. It use nslookup, if your DNS has not the right record of the IP, you
 ___________
 MIT License
 -
-TonoTek - Copyright 2025 www.tonotek.com
+TonoTek - Copyright 2025 tonotek.com
 
 Developed for network testing and device discovery in embedded/IoT environments.
 
