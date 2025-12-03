@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # MIT License
-# TonoTek - Copyright 2025 Developed for network testing and device discovery in embedded/IoT environments. TonoTek.com
+# TonoTek - Copyright 2025 www.tonotek.com
+# Developed for network testing and device discovery in embedded/IoT environments.
 
 # SSH Scanner
 # A parallel and robust scanner to find SSH access on IP address ranges, with MAC address and vendor information.
