@@ -46,7 +46,7 @@ int_to_ip() {
     echo "$((num >> 24 & 255)).$((num >> 16 & 255)).$((num >> 8 & 255)).$((num & 255))"
 }
 
-# SSH Testing (porta 22)
+# SSH Testing (port 22)
 test_ssh() {
     local ip=$1
     local port=22
@@ -109,7 +109,6 @@ worker() {
         hostname=$(get_hostname "$ip")
         mac=$(get_mac "$ip")
 
-        # Scrivi nel buffer
         echo "$ip|$hostname|$mac" >> "$BUFFER_FILE"
     fi
 }
@@ -117,7 +116,7 @@ worker() {
 # IEEE vendor file OUI download
 download_oui() {
     if [ ! -f "$OUI_FILE" ]; then
-        echo -e "${BLUE}Scaricando database MAC vendor...${NC}"
+        echo -e "${BLUE}Downloading MAC database vendor...${NC}"
         timeout 30 curl -s "https://standards-oui.ieee.org/oui/oui.txt" -o "$OUI_FILE" 2>/dev/null
     fi
 }
@@ -146,7 +145,7 @@ END_NUM=$(ip_to_int "$END_IP")
 
 # Parameters check
 if [ $START_NUM -gt $END_NUM ]; then
-    echo -e "${YELLOW}Errore: IP iniziale > IP finale${NC}"
+    echo -e "${YELLOW}Error: Starting IP > final IP ${NC}"
     exit 1
 fi
 
@@ -154,7 +153,7 @@ fi
 clear
 
 echo -e "${YELLOW}=== SSH SCANNER ===${NC}"
-echo -e "${YELLOW}Scansione da $START_IP a $END_IP. Attendere prego...${NC}"
+echo -e "${YELLOW}Scan from $START_IP to $END_IP. Please wait...${NC}"
 
 progress_file="/tmp/ssh_scan_progress_$$.txt"
 echo "0" > "$progress_file"
